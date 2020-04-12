@@ -43,3 +43,45 @@ class MusicVideo:
         no_data = MusicVideo()
         objects = [full_data, partial_data, no_data]
         [(print(repr(x)), print(x)) for x in objects]
+
+    def get_author(self):
+        return self.author
+
+    def set_author(self, author):
+        self.author = author
+
+    def get_title(self):
+        return self.title
+
+    def set_title(self, title):
+        self.title = title
+
+    def get_duration(self):
+        return self.duration
+
+    def set_duration(self, duration):
+        self.duration = duration
+
+    def get_views(self):
+        return self.views
+
+    def set_views(self, views):
+        self.views = views
+
+    def get_genre(self):
+        return self.genre
+
+    def set_genre(self, genre):
+        self.genre = genre
+
+    def get_year(self):
+        return self.year
+
+    def set_year(self, year):
+        self.year = year
+
+    def get_country(self):
+        return self.country
+
+    def set_country(self, country):
+        self.country = country
