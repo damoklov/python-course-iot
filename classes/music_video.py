@@ -2,13 +2,13 @@ class MusicVideo:
     url = "https://youtube.com/"
 
     def __init__(self, author=None, title=None, duration=None, views=None, genre=None, year=None, country=None):
-        self.author = author
-        self.title = title
-        self.duration = duration
-        self.views = views
-        self.genre = genre
-        self.year = year
-        self.country = country
+        self._author = author
+        self._title = title
+        self._duration = duration
+        self._views = views
+        self._genre = genre
+        self._year = year
+        self._country = country
 
     def __str__(self):
         title = "Title: {0}\n".format(self.title)
@@ -44,44 +44,58 @@ class MusicVideo:
         objects = [full_data, partial_data, no_data]
         [(print(repr(x)), print(x)) for x in objects]
 
-    def get_author(self):
-        return self.author
+    @property
+    def author(self):
+        return self._author
 
-    def set_author(self, author):
-        self.author = author
+    @author.setter
+    def author(self, author):
+        self._author = author
 
-    def get_title(self):
-        return self.title
+    @property
+    def title(self):
+        return self._title
 
-    def set_title(self, title):
-        self.title = title
+    @title.setter
+    def title(self, title):
+        self._title = title
 
-    def get_duration(self):
-        return self.duration
+    @property
+    def duration(self):
+        return self._duration
 
-    def set_duration(self, duration):
-        self.duration = duration
+    @duration.setter
+    def duration(self, duration):
+        self._duration = duration
 
-    def get_views(self):
-        return self.views
+    @property
+    def views(self):
+        return self._views
 
-    def set_views(self, views):
-        self.views = views
+    @views.setter
+    def views(self, views):
+        self._views = views
 
-    def get_genre(self):
-        return self.genre
+    @property
+    def genre(self):
+        return self._genre
 
-    def set_genre(self, genre):
-        self.genre = genre
+    @genre.setter
+    def genre(self, genre):
+        self._genre = genre
 
-    def get_year(self):
-        return self.year
+    @property
+    def year(self):
+        return self._year
 
-    def set_year(self, year):
-        self.year = year
+    @year.setter
+    def year(self, year):
+        self._year = year
 
-    def get_country(self):
-        return self.country
+    @property
+    def country(self):
+        return self._country
 
-    def set_country(self, country):
-        self.country = country
+    @country.setter
+    def country(self, country):
+        self._country = country
